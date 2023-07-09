@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
     {
         _gameData.winGame = false;
         _gameData.loseGame = false;
-        _gameData.gameTime = 30;
+        _gameData.gameTime = 500;
         StopAllCoroutines();
         StartCoroutine(UpdateTimerData());
         player.transform.position = startTransform.position;

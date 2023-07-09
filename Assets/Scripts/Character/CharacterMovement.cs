@@ -30,6 +30,8 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
+        
+        Debug.LogError(_isGrounded);
         if (Input.GetKey(KeyCode.W))
         {
             var targetVector = new Vector3(transform.position.x - camera.transform.position.x, 0,transform.position.z - camera.transform.position.z);
@@ -65,7 +67,7 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (!_isGrounded) return;
-            
+            _isGrounded = false;
             rigidbody.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
         }
         
@@ -91,10 +93,5 @@ public class CharacterMovement : MonoBehaviour
         {
             _gameData.loseGame = true;
         }
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        _isGrounded = false;
     }
 }
