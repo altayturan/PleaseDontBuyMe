@@ -462,7 +462,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 599fbdc4235fa11429cede04acafee4a,
         type: 3}
       propertyPath: m_Name
-      value: ElipticShelf
+      value: ElipticShelfWithBaskets
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -508,6 +508,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3758790339974834268}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 599fbdc4235fa11429cede04acafee4a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -273960813710645737}
   m_SourcePrefab: {fileID: 100100000, guid: 599fbdc4235fa11429cede04acafee4a, type: 3}
 --- !u!1 &4993946286458112267 stripped
 GameObject:
@@ -537,6 +541,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 599fbdc4235fa11429cede04acafee4a, type: 3}
+--- !u!208 &-273960813710645737
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4993946286458112267}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.0710001, y: 0.82900006, z: 1.416}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.171, z: 0.3}
+  m_TimeToStationary: 0.5
 --- !u!4 &5622145023962764209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 599fbdc4235fa11429cede04acafee4a,

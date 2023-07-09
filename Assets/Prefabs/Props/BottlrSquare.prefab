@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1173498599533746138}
   - component: {fileID: 5041407799688795464}
   - component: {fileID: 1395051813683005830}
+  - component: {fileID: 3351839560323287941}
   m_Layer: 0
   m_Name: BottlrSquare
   m_TagString: Untagged
@@ -108,3 +109,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6255687079079774844, guid: 00949446dff260640a25b783697569ba, type: 3}
+--- !u!208 &3351839560323287941
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781738830801083791}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.9490001, y: 1.3000001, z: 3.4240003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: -2.8620002, z: 1.006}
+  m_TimeToStationary: 0.5

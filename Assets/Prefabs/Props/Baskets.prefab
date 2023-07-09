@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 1858191927143797898}
   - component: {fileID: 4647247085807116243}
   - component: {fileID: 5889107070053137306}
+  - component: {fileID: 1935735499816752024}
   m_Layer: 0
   m_Name: Baskets
   m_TagString: Untagged
@@ -556,6 +557,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.324684, y: 0.2992516, z: 2.6269908}
   m_Center: {x: 0.02211105, y: 2.0089216, z: -0.3890813}
+--- !u!208 &1935735499816752024
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6631987849727497848}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 4.162, y: 2.2910001, z: 1.6830001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.022000002, y: -0.132, z: -0.020000001}
+  m_TimeToStationary: 0.5
 --- !u!1 &8209997920984109642
 GameObject:
   m_ObjectHideFlags: 0

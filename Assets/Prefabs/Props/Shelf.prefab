@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 3390344263809941996}
   - component: {fileID: 3526756269959856935}
   - component: {fileID: 4687343993164904521}
+  - component: {fileID: 8632362442899279761}
   m_Layer: 0
   m_Name: Shelf
   m_TagString: Untagged
@@ -566,6 +567,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &8632362442899279761
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310900570807539243}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.035, y: 0.596, z: 2.035}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.001, y: 0.41500002, z: -0.11400001}
+  m_TimeToStationary: 0.5
 --- !u!1 &8689749805382334632
 GameObject:
   m_ObjectHideFlags: 0

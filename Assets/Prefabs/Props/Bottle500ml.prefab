@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1587571142380535644}
   - component: {fileID: 9027188618428866023}
   - component: {fileID: 6017531523080551772}
+  - component: {fileID: -5510660751221585832}
   m_Layer: 0
   m_Name: Bottle500ml
   m_TagString: Untagged
@@ -108,3 +109,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8907129875381898129, guid: 00949446dff260640a25b783697569ba, type: 3}
+--- !u!208 &-5510660751221585832
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2779123526270390013}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.943, y: 0.943, z: 2.901}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.305}
+  m_TimeToStationary: 0.5

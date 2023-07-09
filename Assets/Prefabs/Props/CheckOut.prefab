@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 84521346764575846}
   - component: {fileID: 378051796293790141}
   - component: {fileID: 2485276229468469412}
+  - component: {fileID: -2649719423256313364}
   m_Layer: 0
   m_Name: CheckOut
   m_TagString: Untagged
@@ -204,6 +205,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &-2649719423256313364
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4574807067451779870}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.475, y: 5.209, z: 1.9520001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.020000001, y: 0.09900001, z: 0.44200003}
+  m_TimeToStationary: 0.5
 --- !u!1 &5897647471028228543
 GameObject:
   m_ObjectHideFlags: 0

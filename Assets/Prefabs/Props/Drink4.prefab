@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5898333744340320649}
   - component: {fileID: 2423363048554421769}
   - component: {fileID: 3753936885065649353}
+  - component: {fileID: -7713120185497718832}
   m_Layer: 0
   m_Name: Drink4
   m_TagString: Untagged
@@ -107,3 +108,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7108004245302804196, guid: 00949446dff260640a25b783697569ba, type: 3}
+--- !u!208 &-7713120185497718832
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981569192787974428}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.814, y: 0.814, z: 2.206}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.001, y: 0, z: -0.101}
+  m_TimeToStationary: 0.5

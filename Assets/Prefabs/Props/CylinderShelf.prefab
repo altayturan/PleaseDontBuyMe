@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4957799516049327396}
   - component: {fileID: 5269134823373278781}
   - component: {fileID: 4531044254763401713}
+  - component: {fileID: 3050997015236271118}
   m_Layer: 0
   m_Name: CylinderShelf
   m_TagString: Untagged
@@ -108,3 +109,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 37c78cf75a4f1904baaaac26bb557273, type: 3}
+--- !u!208 &3050997015236271118
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321857433822176090}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.0580001, y: 1.963, z: 1.0580001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: -0.017, z: 0}
+  m_TimeToStationary: 0.5

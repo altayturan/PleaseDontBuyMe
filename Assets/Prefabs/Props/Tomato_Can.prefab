@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6230329937992878918}
   - component: {fileID: 4248856821695596691}
   - component: {fileID: 7407713526189088025}
+  - component: {fileID: -2418670724149292988}
   m_Layer: 0
   m_Name: Tomato_Can
   m_TagString: Untagged
@@ -134,3 +135,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3887683042572766240, guid: ea8071286c276b344b1cfc76e2dc8ddb, type: 3}
+--- !u!208 &-2418670724149292988
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634156277192663454}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.0550001, y: 1.0550001, z: 1.245}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: -0.008}
+  m_TimeToStationary: 0.5

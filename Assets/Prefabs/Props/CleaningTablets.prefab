@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9072476995768442786}
   - component: {fileID: 7599431107264279996}
   - component: {fileID: 890430095888096359}
+  - component: {fileID: -3743940473526692391}
   m_Layer: 0
   m_Name: CleaningTablets
   m_TagString: Untagged
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6894428203817054813, guid: 00949446dff260640a25b783697569ba, type: 3}
+--- !u!208 &-3743940473526692391
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160765655214541826}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.159, y: 0.43500003, z: 1.6520001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.002, y: -0.023000002, z: 0.07700001}
+  m_TimeToStationary: 0.5
