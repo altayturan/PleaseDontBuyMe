@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6838695789437021342}
   - component: {fileID: 4248856821695596691}
   - component: {fileID: 7407713526189088025}
+  - component: {fileID: 354909112398430866}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -28,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5634156277192663454}
-  m_LocalRotation: {x: 0.5929575, y: 0.3852291, z: 0.3852291, w: -0.5929575}
+  m_LocalRotation: {x: 0.5929591, y: 0.38522664, z: 0.38522664, w: -0.5929591}
   m_LocalPosition: {x: -0.47920465, y: 15.3, z: -76.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: -66.021}
 --- !u!33 &8139491205091984479
 MeshFilter:
@@ -105,6 +106,7 @@ MonoBehaviour:
   maxVelocityX: 20
   maxVelocityZ: 20
   jumpForce: 70
+  _gameData: {fileID: 11400000, guid: 6dbf30fa7e94f0147b82182d3eb9849b, type: 2}
 --- !u!54 &4248856821695596691
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -154,3 +156,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3887683042572766240, guid: ea8071286c276b344b1cfc76e2dc8ddb, type: 3}
+--- !u!114 &354909112398430866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634156277192663454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db654de1edf8c12459d962ef61e6e628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionPercentage: 0
+  fadeInSpeed: 0.0025
+  fadeOutSpeed: 0.0025
+  gameController: {fileID: 0}
+  alreadyDetected: 0
+  renderer: {fileID: 6230329937992878918}
