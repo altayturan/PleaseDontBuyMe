@@ -11,6 +11,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private GameObject camera;
 
     [SerializeField] private float torque = 30;
+    [SerializeField] private float speed = 10;
     [SerializeField] private float maxVelocityX = 10;
     [SerializeField] private float maxVelocityZ = 10;
     [SerializeField] private float jumpForce=5;
@@ -30,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             var targetVector = new Vector3(transform.position.x - camera.transform.position.x, 0,transform.position.z - camera.transform.position.z);
-            rigidbody.AddForce(targetVector);
+            rigidbody.AddForce(targetVector.normalized * speed);
         }
         
         
@@ -38,7 +39,7 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             var targetVector = new Vector3(transform.position.x - camera.transform.position.x, 0,transform.position.z - camera.transform.position.z);
-            rigidbody.AddForce(-targetVector);
+            rigidbody.AddForce(-targetVector.normalized * speed);
             
         }
         
@@ -46,9 +47,8 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             var targetVector = new Vector3(transform.position.x - camera.transform.position.x, 0,transform.position.z - camera.transform.position.z);
-            targetVector = Quaternion.AngleAxis(90, Vector3.up) * targetVector;
+            targetVector = Quaternion.AngleAxis(90, Vector3.up) * targetVector.normalized * torque;
             rigidbody.AddForce(-targetVector);
-            //rigidbody.AddTorque(new Vector3(0,-1,0) * torque,ForceMode.Force);
         }
         
         
@@ -56,9 +56,8 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
              var targetVector = new Vector3(transform.position.x - camera.transform.position.x, 0,transform.position.z - camera.transform.position.z);
-             targetVector = Quaternion.AngleAxis(90, Vector3.up) * targetVector;
+             targetVector = Quaternion.AngleAxis(90, Vector3.up) * targetVector.normalized * torque;
             rigidbody.AddForce(targetVector);
-            //rigidbody.AddTorque(new Vector3(0,1,0) * torque,ForceMode.Force);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
