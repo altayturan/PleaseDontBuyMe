@@ -52,7 +52,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Boolean: 0
-    - _Fade: 0
+    - _Fade: 0.7650002
     - _FadeOutline: 0
     - _NoiseScale: 31.29
     - _QueueControl: 0

@@ -10,5 +10,6 @@ public class GameData : ScriptableObject
 
     public bool winGame=false;
     public bool loseGame = false;
+    public bool falled = false;
 
 }

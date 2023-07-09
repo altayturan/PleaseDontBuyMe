@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject failScreen;
     [SerializeField] private GameObject winScreen;
+    [SerializeField] private GameObject fallScreen;
     [FormerlySerializedAs("startPosition")] [SerializeField] private Transform startTransform;
     [SerializeField] private Transform player;
     [SerializeField] private Rigidbody playerRigidbody;
@@ -30,6 +31,11 @@ public class GameController : MonoBehaviour
     {
         if (_gameData.loseGame)
         {
+            if (_gameData.falled)
+            {
+                FallScreen();
+                return;
+            }
             LoseGame();
         }
 
@@ -72,6 +78,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
         _gameData.winGame = false;
         _gameData.loseGame = false;
+        _gameData.falled = false;
         _gameData.gameTime = 500;
         StopAllCoroutines();
         StartCoroutine(UpdateTimerData());
@@ -82,6 +89,7 @@ public class GameController : MonoBehaviour
         failScreen.SetActive(false);
         winScreen.SetActive(false);
         pauseScreen.SetActive(false);
+        fallScreen.SetActive(false);
     }
 
     public void LoseGame()
@@ -92,6 +100,11 @@ public class GameController : MonoBehaviour
     public void WinGame()
     {
         if(!winScreen.activeSelf) winScreen.SetActive(true);
+    }
+
+    public void FallScreen()
+    {
+        if(!fallScreen.activeSelf) fallScreen.SetActive(true);
     }
 
     public void PauseGame()

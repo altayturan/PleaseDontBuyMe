@@ -22,6 +22,8 @@ public class CharacterMovement : MonoBehaviour
     
     private Vector3 _clampedVelocity;
 
+    [SerializeField] private AudioSource _audioSource;
+
 
     private void Start()
     {
@@ -84,6 +86,7 @@ public class CharacterMovement : MonoBehaviour
     {
         _isGrounded = true;
 
+        if(!_audioSource.isPlaying) _audioSource.Play();
 
         if (collision.collider.CompareTag("Door"))
         {
@@ -92,6 +95,7 @@ public class CharacterMovement : MonoBehaviour
         if (collision.collider.CompareTag("Ground"))
         {
             _gameData.loseGame = true;
+            _gameData.falled = true;
         }
     }
 }
