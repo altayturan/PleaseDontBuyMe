@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     [FormerlySerializedAs("startPosition")] [SerializeField] private Transform startTransform;
     [SerializeField] private Transform player;
     [SerializeField] private Rigidbody playerRigidbody;
+    
 
 
     private void Start()

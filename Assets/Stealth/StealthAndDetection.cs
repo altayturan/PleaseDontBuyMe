@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Slider = UnityEngine.UI.Slider;
 
 public class StealthAndDetection : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class StealthAndDetection : MonoBehaviour
     [SerializeField] private GameController gameController;
     [SerializeField] private bool alreadyDetected;
     [SerializeField] private Renderer renderer;
+
+    [SerializeField] private Slider _slider;
 
     public void StartDetection()
     {
@@ -49,10 +53,13 @@ public class StealthAndDetection : MonoBehaviour
             if (renderer.sharedMaterial.GetFloat("_Fade") == 0f)
             {
                 StopCoroutine(_detectionCountdownRoutine);
+                detectionPercentage = 0;
+                _slider.value = detectionPercentage;
                 alreadyDetected = false;
                 break;
             }
             detectionPercentage += 5f;
+            _slider.value = detectionPercentage;
             if (detectionPercentage >= 100)
             {
                 gameController.LoseGame();
