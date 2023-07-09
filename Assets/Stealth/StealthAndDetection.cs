@@ -18,7 +18,7 @@ public class StealthAndDetection : MonoBehaviour
 
     public void StartDetection()
     {
-        if (renderer.sharedMaterial.GetFloat("_Fade") == 0f || alreadyDetected) return;
+        if (renderer.sharedMaterial.GetFloat("_Fade") >= 0.5f || alreadyDetected) return;
         alreadyDetected = true;
         _detectionCountdownRoutine = StartCoroutine(DetectionCountdownCoroutine());
     }
