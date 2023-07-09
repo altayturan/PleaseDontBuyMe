@@ -163,9 +163,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 8506452619920815982}
-  forcePoint: {fileID: 4663720421177627927}
-  forcePointPivot: {fileID: 7988631920687453440}
   camera: {fileID: 0}
+  torque: 15
+  maxVelocityX: 10
+  maxVelocityZ: 10
+  jumpForce: 50
 --- !u!54 &8506452619920815982
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -174,7 +176,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6811757443672737653}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 6
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
