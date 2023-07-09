@@ -13,7 +13,8 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _Fade
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -51,7 +52,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Boolean: 0
-    - _Fade: 1
+    - _Fade: 0
     - _FadeOutline: 0
     - _NoiseScale: 31.29
     - _QueueControl: 0
