@@ -16,6 +16,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float maxVelocityZ = 10;
     [SerializeField] private float jumpForce=5;
 
+    [SerializeField] private GameData _gameData;
+
     private bool _isGrounded = true;
     
     private Vector3 _clampedVelocity;
@@ -79,6 +81,16 @@ public class CharacterMovement : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         _isGrounded = true;
+
+
+        if (collision.collider.CompareTag("Door"))
+        {
+            _gameData.winGame = true;
+        }
+        if (collision.collider.CompareTag("Ground"))
+        {
+            _gameData.loseGame = true;
+        }
     }
 
     private void OnCollisionExit(Collision other)

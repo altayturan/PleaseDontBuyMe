@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameData _gameData;
 
     [SerializeField] private GameObject failScreen;
+    [SerializeField] private GameObject winScreen;
     [FormerlySerializedAs("startPosition")] [SerializeField] private Transform startTransform;
     [SerializeField] private Transform player;
     [SerializeField] private Rigidbody playerRigidbody;
@@ -24,9 +25,14 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (_gameData.gameTime <= 0)
+        if (_gameData.loseGame)
         {
             LoseGame();
+        }
+
+        if (_gameData.winGame)
+        {
+            WinGame();
         }
     }
 
@@ -39,6 +45,8 @@ public class GameController : MonoBehaviour
             UpdateTimerText();
             yield return new WaitForSeconds(1);
         }
+
+        _gameData.loseGame = true;
     }
 
 
@@ -53,7 +61,9 @@ public class GameController : MonoBehaviour
 
     public void RestartGame()
     {
-        _gameData.gameTime = 10;
+        _gameData.winGame = false;
+        _gameData.loseGame = false;
+        _gameData.gameTime = 30;
         StopAllCoroutines();
         StartCoroutine(UpdateTimerData());
         player.transform.position = startTransform.position;
@@ -61,10 +71,16 @@ public class GameController : MonoBehaviour
         playerRigidbody.velocity = Vector3.zero;
         playerRigidbody.angularVelocity = Vector3.zero;
         failScreen.SetActive(false);
+        winScreen.SetActive(false);
     }
 
     public void LoseGame()
     {
         if(!failScreen.activeSelf) failScreen.SetActive(true);
+    }
+
+    public void WinGame()
+    {
+        if(!winScreen.activeSelf) winScreen.SetActive(true);
     }
 }

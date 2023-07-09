@@ -7,6 +7,8 @@ using UnityEngine;
 public class GameData : ScriptableObject
 {
     public int gameTime;
-    
-    
+
+    public bool winGame=false;
+    public bool loseGame = false;
+
 }
