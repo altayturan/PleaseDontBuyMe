@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class GameController : MonoBehaviour
@@ -15,6 +16,7 @@ public class GameController : MonoBehaviour
     [FormerlySerializedAs("startPosition")] [SerializeField] private Transform startTransform;
     [SerializeField] private Transform player;
     [SerializeField] private Rigidbody playerRigidbody;
+    [SerializeField] private GameObject pauseScreen;
     
 
 
@@ -34,6 +36,11 @@ public class GameController : MonoBehaviour
         if (_gameData.winGame)
         {
             WinGame();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
         }
     }
 
@@ -62,6 +69,7 @@ public class GameController : MonoBehaviour
 
     public void RestartGame()
     {
+        Time.timeScale = 1;
         _gameData.winGame = false;
         _gameData.loseGame = false;
         _gameData.gameTime = 500;
@@ -73,6 +81,7 @@ public class GameController : MonoBehaviour
         playerRigidbody.angularVelocity = Vector3.zero;
         failScreen.SetActive(false);
         winScreen.SetActive(false);
+        pauseScreen.SetActive(false);
     }
 
     public void LoseGame()
@@ -83,5 +92,22 @@ public class GameController : MonoBehaviour
     public void WinGame()
     {
         if(!winScreen.activeSelf) winScreen.SetActive(true);
+    }
+
+    public void PauseGame()
+    {
+        if(!pauseScreen.activeSelf) pauseScreen.SetActive(true);
+        Time.timeScale = 0;
+    }
+    
+    public void ResumeGame()
+    {
+        pauseScreen.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
